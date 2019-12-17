@@ -45,7 +45,7 @@ class _MyHomePageBodyState extends State<MyHomePageBody> {
     var title = _controller.text;
     // save
     var pref = await SharedPreferences.getInstance();
-    pref.setString("title", title);
+    await pref.setString("title", title);
 
     // clear
     _controller.text = "";
